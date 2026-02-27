@@ -1,0 +1,25 @@
+[package]
+name = "kaido-core"
+version = "0.1.0"
+edition = "2021"
+description = "Aiken smart contract generator — core library"
+license = "Apache-2.0"
+
+[lib]
+crate-type = ["cdylib", "rlib"]
+
+[dependencies]
+tera = "1"
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+toml = "0.8"
+thiserror = "2"
+wasm-bindgen = { version = "0.2", optional = true }
+getrandom = { version = "0.2", features = ["js"], optional = true }
+
+[dev-dependencies]
+tempfile = "3"
+
+[features]
+default = []
+wasm = ["wasm-bindgen", "getrandom"]

@@ -1,0 +1,7 @@
+[workspace]
+members = [
+    "crates/kaido-core",
+    "crates/kaido-cli",
+    "crates/kaido-mcp",
+]
+resolver = "2"

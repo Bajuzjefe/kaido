@@ -1,0 +1,22 @@
+[package]
+name = "kaido"
+version = "0.1.0"
+edition = "2021"
+description = "Aiken smart contract generator — the OpenZeppelin Wizard for Cardano"
+license = "Apache-2.0"
+
+[[bin]]
+name = "kaido"
+path = "src/main.rs"
+
+[dependencies]
+kaido-core = { path = "../kaido-core" }
+clap = { version = "4", features = ["derive"] }
+colored = "3"
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+
+[dev-dependencies]
+tempfile = "3"
+assert_cmd = "2"
+predicates = "3"
